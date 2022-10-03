@@ -1,0 +1,14 @@
+create table studentData(st_id int PRIMARY KEY,st_name varchar(30),DOB DATE,fees int,city varchar(20));
+
+insert into studentdata values('1','Shashwat','19-jun-2001','10000','Meerut');
+insert into studentdata values('2','Ayush','12-oct-2001','20000','Dehradun');
+insert into studentdata values('3','maulik','25-jul-2001','35000','ahmdabad');
+insert into studentdata values('4','satyam','14-sept-2001','40000','Meerut');
+insert into studentdata values('5','vasundhara','24-march-2002','35000','Meerut');
+insert into studentdata values('6','Ritik','15-nov-2001','90000','Lucknow');
+
+
+
+
+create table department(dept_id INT NOT NULL PRIMARY KEY,
+dept_name VARCHAR(20),st_id INT FOREIGN KEY REFERENCES studentdata(st_id));
